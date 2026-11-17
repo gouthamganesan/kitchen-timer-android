@@ -1,0 +1,11 @@
+# Platform progress
+
+2026-11-17: Read requirements, architecture and ownership. Verified official Android alarm/service guidance. Chosen SCHEDULE_EXACT_ALARM (checked before starting) and systemExempted foreground service only while ringing. Working on bootstrap and pure engine. No tests run yet.
+
+2026-11-17: Bootstrap, 9 pure engine tests, generation-safe repository and AlarmManager receiver, recovery receiver, custom compact/expanded notification with native Chronometer, and ringing-only foreground service implemented. Native build/testing starts next. System exact-alarm access is required to start; missing access refuses start, and recovered running timer pauses if access was revoked. Service type systemExempted follows official exact-alarm-holder exception. No device operations performed.
+
+2026-11-17: First integrated build failed at unfinished UI only (missing dialog symbols and BoxWithConstraints receiver references); no platform compiler errors reported. Added 8 Robolectric regressions for alarms/actions/service. Removed alarm-service StateFlow collection to avoid keeping ticker alive in background. Added foreground permission/eligibility race handling. Handed next build loop to integration; tests NOT YET RUN successfully.
+
+2026-11-17: Integration APK compiled. Two platform test failures traced to Robolectric retaining the app singleton across method applications; explicitly resetting the singleton restores independent Context/AlarmManager/state. Focused platform suite PASSED all 8 cases. QA review found async media error resource leak; fixed player/focus cleanup plus one guarded default-alarm fallback and added ninth regression (awaiting integration full run). No active Gradle process left with platform agent.
+
+2026-11-17: Integration reports full candidate build and 31 tests passed (including added async audio regression). Lint found one API26-incompatible navigation-bar theme attribute plus warnings. Removed redundant attribute (Activity owns bar appearance), added expected-action allowlist to protected recovery receiver, and explicit Android12 cloud/device-transfer exclusions. Narrowly suppressed applicationContext-only singleton leak false positive. Dependency/KTX recommendations remain nonblocking; no upgrades made. Awaiting integration lint rerun.

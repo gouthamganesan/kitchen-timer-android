@@ -1,0 +1,35 @@
+appId: dev.goutham.kitchentimer
+name: Global themes and old minimal focus view
+---
+- runFlow: common/regular-ready.yaml
+- doubleTapOn: "Quick set"
+- tapOn: "Set 30 minutes"
+- tapOn: "Open settings"
+- tapOn: "Dark"
+- back
+- takeScreenshot: regular-dark-backlights
+- tapOn: "Open settings"
+- tapOn: "Light"
+- tapOn: "Focus mode"
+- back
+- assertNotVisible: "Quick set"
+- assertNotVisible: "Set duration"
+- assertNotVisible: "Reset timer"
+- takeScreenshot: focus-light
+- tapOn: "Start timer"
+- assertVisible: "Pause timer"
+- tapOn: "Pause timer"
+- assertVisible: "Resume timer"
+- tapOn: "Open settings"
+- assertVisible: "Theme"
+- assertVisible: "Follow system"
+- tapOn: "Dark"
+- back
+- takeScreenshot: focus-dark
+- assertNotVisible: "Quick set"
+- tapOn: "Open settings"
+- tapOn: "Focus mode"
+- tapOn: "Follow system"
+- back
+- assertVisible: "Set duration"
+- tapOn: "Reset timer"

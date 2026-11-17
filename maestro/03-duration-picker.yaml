@@ -1,0 +1,36 @@
+appId: dev.goutham.kitchentimer
+name: Duration keyboard entry and cancel
+---
+- runFlow: common/regular-ready.yaml
+- tapOn: "Set duration"
+- assertVisible: "Hours"
+- assertVisible: "Minutes"
+- takeScreenshot: duration-dial
+- tapOn: "Type duration"
+- tapOn: "Hours"
+- eraseText
+- inputText: "1"
+- tapOn: "Minutes"
+- eraseText
+- inputText: "5"
+- hideKeyboard
+- tapOn: "Cancel"
+- assertVisible:
+    text: "Start timer"
+    enabled: false
+- tapOn: "Set duration"
+- tapOn: "Type duration"
+- tapOn: "Hours"
+- eraseText
+- inputText: "1"
+- tapOn: "Minutes"
+- eraseText
+- inputText: "5"
+- hideKeyboard
+- takeScreenshot: duration-keyboard
+- tapOn: "Set"
+- assertVisible:
+    text: "Start timer"
+    enabled: true
+- takeScreenshot: one-hour-five-layer
+- tapOn: "Reset timer"

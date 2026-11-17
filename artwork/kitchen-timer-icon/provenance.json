@@ -1,0 +1,11 @@
+{
+  "generator": "built-in image_gen",
+  "selected_source": "kitchen-timer-icon.origin.png",
+  "selected_reason": "Arched tapered housing and integrated feet create a more distinctive physical kitchen-timer silhouette than the rounded-square alternate.",
+  "prompt": "Use case: logo-brand. Generate a single original Android app icon concept for Kitchen Timer. Seed: 742931. Front-on physical kitchen countdown timer, not a stopwatch. Centered sturdy squat molded timer body with softly rounded shoulders, very slight trapezoid taper and two short integrated feet. Deep charcoal sage outer housing, large warm ivory inset dial, bold vermilion red remaining-time sector beginning at noon and covering about 35 minutes clockwise. Twelve crisp dark radial tick marks, no digits. A large raised warm ivory circular hub with a short broad ivory winding tab pointing down-left at seven oclock, physically separating the red sector edge. Beautiful controlled broad gradients suggest real molded enamel and plastic, upper-left light, but clean vector-convertible geometry and strong silhouette. Whole object is about 64 percent of a square canvas, within central safe area. Full-bleed solid charcoal-sage background #29332E, no outer rounded app mask, no table or environment. Premium tactile industrial design, readable at 48px. No text, numbers, logo, watermark, cooking utensils, bells, stopwatch crown, thin clock hands, glitter, tiny decorative parts or photographic texture. Own silhouette and proportions, no existing brand copy.",
+  "vector_method": "Manual semantic paths/primitives and gradients, no raster image embedding.",
+  "native_export": "Custom project Android VectorDrawable/adaptive export from these same semantic layers. This is not an Apple adapter claim.",
+  "selected_prompt_seed_label": 742931,
+  "unselected_prompt_seed_label": 918267,
+  "seed_note": "Numbers were labels embedded in the generation prompt, not a reproducible generator seed parameter."
+}

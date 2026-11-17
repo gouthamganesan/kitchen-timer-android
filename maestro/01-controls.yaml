@@ -1,0 +1,22 @@
+appId: dev.goutham.kitchentimer
+name: Regular timer controls and fixed presets
+---
+- runFlow: common/regular-ready.yaml
+- doubleTapOn: "Quick set"
+- assertVisible: "Set 1 minutes"
+- assertVisible: "Set 60 minutes"
+- tapOn: "Set 5 minutes"
+- assertVisible:
+    text: "Start timer"
+    enabled: true
+- takeScreenshot: regular-light
+- tapOn: "Start timer"
+- assertVisible: "Pause timer"
+- tapOn: "Pause timer"
+- assertVisible: "Resume timer"
+- tapOn: "Resume timer"
+- assertVisible: "Pause timer"
+- tapOn: "Reset timer"
+- assertVisible:
+    text: "Start timer"
+    enabled: false

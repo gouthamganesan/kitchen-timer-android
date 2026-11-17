@@ -1,0 +1,26 @@
+appId: dev.goutham.kitchentimer
+---
+# Starts from the installed app, preserves data, then deliberately resets this test timer.
+- launchApp:
+    stopApp: false
+    clearState: false
+- tapOn: "Open settings"
+- runFlow:
+    when:
+      visible:
+        text: "Focus mode"
+        checked: true
+    commands:
+      - tapOn: "Focus mode"
+- tapOn: "Light"
+- back
+- runFlow:
+    when:
+      visible: "Stop alarm"
+    commands:
+      - tapOn: "Stop alarm"
+- tapOn: "Reset timer"
+- assertVisible: "Set duration"
+- assertVisible:
+    text: "Start timer"
+    enabled: false

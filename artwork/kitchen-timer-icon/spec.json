@@ -1,0 +1,164 @@
+{
+  "name": "KitchenTimerIcon",
+  "canvas": 1024,
+  "radius": 224,
+  "target_platforms": [
+    "Android"
+  ],
+  "deliverable_type": "source-package",
+  "source_reference": "kitchen-timer-icon.origin.png",
+  "brief": "Original Kitchen Timer: arched charcoal-sage housing with integrated feet, ivory dial, red 35-minute sector and large diagonal winding paddle. Generated raster first, rebuilt as editable geometry.",
+  "semantic_review": {
+    "status": "accepted-approximation",
+    "identity_risk": "low",
+    "basis": "Original generated concept, no external brand identity. Reconstructed silhouette and component relationships; controlled geometric gradients simplify photographic shading.",
+    "route": "accepted-approximation",
+    "notes": "Five semantic foreground layers plus background. Red reduced from neon generated red to approved warm vermilion; twelve marks made mathematically regular. No bitmap traced or embedded. Android adaptation separately scales foreground into mask safe zone. Overlay confirmed aligned source silhouette/dial geometry. Difference hotspots were housing and knob shading; refined broad surface gradients and explicit molded edge, without noisy raster texture or filters. Independent root review accepted silhouette/face/sector/paddle semantic match and editable material approximation; final narrow pass widened upper-left bezel light and added gradient contact shadow under knob. Strict pixel reproduction is not claimed."
+  },
+  "source_analysis": {
+    "fidelity_target": "Preserve original arched housing/feet, ivory circular face, red 35-minute sector, twelve dark marks and diagonal ivory winding paddle. Material is intentionally simplified into editable broad gradients.",
+    "identity_risk": "low",
+    "route": "semantic-svg-approximation",
+    "must_preserve": [
+      "Arched tapered housing with feet",
+      "Ivory face and hub",
+      "Red remaining-time sector",
+      "Down-left winding paddle",
+      "12 scale marks"
+    ],
+    "must_not_add": [
+      "Words or numbers",
+      "Clock bells or stopwatch crown",
+      "Raster embeddings",
+      "Kitchen clipart"
+    ],
+    "components": [
+      {
+        "id": "molded-housing",
+        "layer": "molded-housing",
+        "format": "svg",
+        "source_provenance": "generated-in-task",
+        "alignment_basis": "Manually reconstructed semantic shapes from selected generated timer concept; clean primitives rather than tracing texture.",
+        "spec_constraints": [
+          "No embedded image",
+          "Smooth geometry",
+          "Preserve original timer identity"
+        ]
+      },
+      {
+        "id": "ivory-dial",
+        "layer": "ivory-dial",
+        "format": "svg",
+        "source_provenance": "generated-in-task",
+        "alignment_basis": "Manually reconstructed semantic shapes from selected generated timer concept; clean primitives rather than tracing texture.",
+        "spec_constraints": [
+          "No embedded image",
+          "Smooth geometry",
+          "Preserve original timer identity"
+        ]
+      },
+      {
+        "id": "remaining-time",
+        "layer": "remaining-time",
+        "format": "svg",
+        "source_provenance": "generated-in-task",
+        "alignment_basis": "Manually reconstructed semantic shapes from selected generated timer concept; clean primitives rather than tracing texture.",
+        "spec_constraints": [
+          "No embedded image",
+          "Smooth geometry",
+          "Preserve original timer identity"
+        ]
+      },
+      {
+        "id": "minute-scale",
+        "layer": "minute-scale",
+        "format": "svg",
+        "source_provenance": "generated-in-task",
+        "alignment_basis": "Manually reconstructed semantic shapes from selected generated timer concept; clean primitives rather than tracing texture.",
+        "spec_constraints": [
+          "No embedded image",
+          "Smooth geometry",
+          "Preserve original timer identity"
+        ]
+      },
+      {
+        "id": "winding-paddle",
+        "layer": "winding-paddle",
+        "format": "svg",
+        "source_provenance": "generated-in-task",
+        "alignment_basis": "Manually reconstructed semantic shapes from selected generated timer concept; clean primitives rather than tracing texture.",
+        "spec_constraints": [
+          "No embedded image",
+          "Smooth geometry",
+          "Preserve original timer identity"
+        ]
+      }
+    ],
+    "acceptance_checks": [
+      "Review overall silhouette/scale and meaning at 64px",
+      "No image elements in editable SVG",
+      "Android adaptive mask keeps timer intact"
+    ]
+  },
+  "fill": {
+    "solid": "extended-srgb:0.16078,0.20000,0.18039,1.00000"
+  },
+  "layers": [
+    {
+      "name": "background",
+      "svg": "<rect width=\"1024\" height=\"1024\" fill=\"#29332E\"/>",
+      "composer": {
+        "include": false
+      }
+    },
+    {
+      "name": "molded-housing",
+      "defs": "<radialGradient id=\"shell\" gradientUnits=\"userSpaceOnUse\" cx=\"300\" cy=\"210\" r=\"760\"><stop offset=\"0\" stop-color=\"#D0DEBB\"/><stop offset=\".20\" stop-color=\"#A4BB91\"/><stop offset=\".46\" stop-color=\"#64825B\"/><stop offset=\".78\" stop-color=\"#334E37\"/><stop offset=\"1\" stop-color=\"#203326\"/></radialGradient><radialGradient id=\"shellFace\" gradientUnits=\"userSpaceOnUse\" cx=\"350\" cy=\"180\" r=\"830\"><stop offset=\"0\" stop-color=\"#95AE86\"/><stop offset=\".14\" stop-color=\"#647F5A\"/><stop offset=\".42\" stop-color=\"#3C5840\"/><stop offset=\".79\" stop-color=\"#304A36\"/><stop offset=\"1\" stop-color=\"#213429\"/></radialGradient>",
+      "svg": "<path d=\"M512 132 C702 132 825 232 853 426 L897 746 C905 796 897 824 874 846 L866 883 Q864 900 840 900 H738 Q721 900 711 883 L703 872 Q695 860 675 860 H349 Q329 860 320 877 L308 891 Q301 900 282 900 H181 Q160 900 158 883 L153 861 Q151 850 143 840 C125 820 120 787 126 748 L169 426 C197 244 331 132 512 132 Z\" fill=\"url(#shell)\"/><path d=\"M512 132 C702 132 825 232 853 426 L897 746 C905 796 897 824 874 846 L866 883 Q864 900 840 900 H738 Q721 900 711 883 L703 872 Q695 860 675 860 H349 Q329 860 320 877 L308 891 Q301 900 282 900 H181 Q160 900 158 883 L153 861 Q151 850 143 840 C125 820 120 787 126 748 L169 426 C197 244 331 132 512 132 Z\" transform=\"translate(512 516) scale(.955) translate(-512 -516)\" fill=\"url(#shellFace)\"/>",
+      "composer": {
+        "format": "svg",
+        "reason": "Continuous original housing silhouette and integrated feet remain editable."
+      }
+    },
+    {
+      "name": "ivory-dial",
+      "defs": "<radialGradient id=\"dial\" gradientUnits=\"userSpaceOnUse\" cx=\"370\" cy=\"330\" r=\"640\"><stop offset=\"0\" stop-color=\"#FFF9E7\"/><stop offset=\".6\" stop-color=\"#F3E7C9\"/><stop offset=\"1\" stop-color=\"#D5C299\"/></radialGradient>",
+      "svg": "<circle cx=\"512\" cy=\"500\" r=\"301\" fill=\"#1F3A29\"/><circle cx=\"512\" cy=\"497\" r=\"296\" fill=\"url(#dial)\"/>",
+      "composer": {
+        "format": "svg",
+        "reason": "Simple inset circular dial with broad warm enamel gradient."
+      }
+    },
+    {
+      "name": "remaining-time",
+      "defs": "<linearGradient id=\"red\" gradientUnits=\"userSpaceOnUse\" x1=\"470\" y1=\"260\" x2=\"650\" y2=\"740\"><stop offset=\"0\" stop-color=\"#F24C2E\"/><stop offset=\".55\" stop-color=\"#DA3827\"/><stop offset=\"1\" stop-color=\"#BD2E21\"/></linearGradient>",
+      "svg": "<path d=\"M512 497 L512 257 A240 240 0 1 1 392 704.846 Z\" fill=\"url(#red)\"/>",
+      "composer": {
+        "format": "svg",
+        "reason": "One geometric 35-minute circular sector; no clock hands."
+      }
+    },
+    {
+      "name": "minute-scale",
+      "svg": "<rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(0 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(30 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(60 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(90 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(120 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(150 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(180 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(210 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(240 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(270 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(300 512 497)\" fill=\"#29372E\"/><rect x=\"505\" y=\"221\" width=\"14\" height=\"51\" rx=\"7\" transform=\"rotate(330 512 497)\" fill=\"#29372E\"/>",
+      "composer": {
+        "format": "svg",
+        "reason": "Twelve consistent radial filled capsules retain readability at launcher size."
+      }
+    },
+    {
+      "name": "winding-paddle",
+      "defs": "<linearGradient id=\"paddle\" gradientUnits=\"userSpaceOnUse\" x1=\"420\" y1=\"560\" x2=\"458\" y2=\"610\"><stop offset=\"0\" stop-color=\"#FFF9E6\"/><stop offset=\".35\" stop-color=\"#F7ECCF\"/><stop offset=\"1\" stop-color=\"#D2BE93\"/></linearGradient><radialGradient id=\"hub\" gradientUnits=\"userSpaceOnUse\" cx=\"475\" cy=\"452\" r=\"145\"><stop offset=\"0\" stop-color=\"#FFFCEC\"/><stop offset=\".52\" stop-color=\"#F6E9CA\"/><stop offset=\".80\" stop-color=\"#EBDAB5\"/><stop offset=\"1\" stop-color=\"#C6AF84\"/></radialGradient><radialGradient id=\"knobContact\" gradientUnits=\"userSpaceOnUse\" cx=\"528\" cy=\"519\" r=\"116\"><stop offset=\".66\" stop-color=\"#302816\" stop-opacity=\".34\"/><stop offset=\".88\" stop-color=\"#302816\" stop-opacity=\".16\"/><stop offset=\"1\" stop-color=\"#302816\" stop-opacity=\"0\"/></radialGradient>",
+      "svg": "<circle cx=\"528\" cy=\"519\" r=\"116\" fill=\"url(#knobContact)\"/><path d=\"M458 539 L514 580 L410 704 Q394 725 371 709 Q348 694 365 668 Z\" fill=\"#AE946C\"/><path d=\"M454 531 L509 571 L403 696 Q388 715 369 701 Q352 688 368 665 Z\" fill=\"url(#paddle)\"/><circle cx=\"515\" cy=\"504\" r=\"100\" fill=\"#AE9872\"/><circle cx=\"512\" cy=\"497\" r=\"99\" fill=\"url(#hub)\"/>",
+      "composer": {
+        "format": "svg",
+        "reason": "Large circular hub and broad diagonal thumb paddle, with semantic base and cap surfaces."
+      }
+    }
+  ],
+  "acceptance": {
+    "accepted_by": "independent_visual_review",
+    "evidence": "Root agent reviewed whole SVG preview and source and accepted strong silhouette/face/red-sector/paddle semantic match; requested only brief material pass.",
+    "scope": "Editable semantic SVG approximation of original generated kitchen timer; preserve geometry/scale/colors and controlled material; no claim of photoreal pixel matching."
+  }
+}

@@ -1,0 +1,38 @@
+appId: dev.goutham.kitchentimer
+name: Notification pause resume and reset
+---
+# Requires notifications and exact-alarm access. Android notification labels are standard text.
+- runFlow: common/regular-ready.yaml
+- doubleTapOn: "Quick set"
+- tapOn: "Set 5 minutes"
+- tapOn: "Start timer"
+- pressKey: Home
+# Pull Android's notification shade from the status-bar edge using Maestro.
+- swipe:
+    start: "50%,1%"
+    end: "50%,80%"
+    duration: 500
+- runFlow:
+    when:
+      notVisible: "Pause"
+    commands:
+      - tapOn:
+          id: "android:id/expand_button_touch_container"
+          childOf:
+            id: "android:id/notification_headerless_view_row"
+            containsDescendants:
+              - id: "dev.goutham.kitchentimer:id/notification_status"
+- assertVisible: "Pause"
+- takeScreenshot: ongoing-notification
+- tapOn: "Pause"
+- assertVisible: "Resume"
+- tapOn: "Resume"
+- assertVisible: "Pause"
+- tapOn: "Reset"
+- back
+- launchApp:
+    stopApp: false
+    clearState: false
+- assertVisible:
+    text: "Start timer"
+    enabled: false

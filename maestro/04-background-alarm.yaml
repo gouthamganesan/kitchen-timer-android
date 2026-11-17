@@ -1,0 +1,40 @@
+appId: dev.goutham.kitchentimer
+name: Background one-minute completion and stop
+---
+# Requires notifications and exact-alarm access before starting; ringing may be audible.
+- runFlow: common/regular-ready.yaml
+- doubleTapOn: "Quick set"
+- tapOn: "Set 1 minutes"
+- tapOn: "Start timer"
+- assertVisible: "Pause timer"
+- pressKey: Home
+# Pull Android's notification shade from the status-bar edge using Maestro.
+- swipe:
+    start: "50%,1%"
+    end: "50%,80%"
+    duration: 500
+- extendedWaitUntil:
+    visible: "Time is up"
+    timeout: 90000
+- runFlow:
+    when:
+      notVisible: "Stop"
+    commands:
+      - tapOn:
+          id: "android:id/expand_button_touch_container"
+          childOf:
+            id: "android:id/notification_headerless_view_row"
+            containsDescendants:
+              - id: "dev.goutham.kitchentimer:id/notification_status"
+- assertVisible: "Stop"
+- takeScreenshot: background-ringing-notification
+- tapOn: "Stop"
+- back
+- launchApp:
+    stopApp: false
+    clearState: false
+- assertVisible:
+    text: "Start timer"
+    enabled: true
+- assertNotVisible: "Stop alarm"
+- tapOn: "Reset timer"
