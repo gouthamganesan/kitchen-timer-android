@@ -9,3 +9,5 @@
 5. Record results and hand off the reviewable local repository.
 
 Acceptance: no device identifiers, credentials, local build paths, APKs or raw diagnostic output in the publication candidate; honest design narrative and test claims; reproducible app build.
+
+Publication completed: public GitHub repository created and version 0.1.2 installed on the phone. Build infrastructure explicitly installs Android SDK tools; hosted check history is available through the publication handoff.

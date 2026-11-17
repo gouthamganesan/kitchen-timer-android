@@ -11,3 +11,6 @@ gradlew text eol=lf
 *.png binary
 *.ttf binary
 *.jar binary
+
+# The HTML studies are design documentation; the shipped app is native.
+reference/** linguist-documentation=true

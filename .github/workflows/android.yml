@@ -27,6 +27,8 @@ jobs:
           java-version: '17'
       - name: Set up Gradle and validate wrapper
         uses: gradle/actions/setup-gradle@4c125117fe7c5aed11272ec4213f602f012f89f2 # v5
+      - name: Set up Android SDK tools
+        uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
       - name: Install Android SDK packages
         run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0'
       - name: Build, unit tests and lint
