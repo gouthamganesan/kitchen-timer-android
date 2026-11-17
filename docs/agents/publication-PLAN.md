@@ -16,5 +16,5 @@ Publication completed: public GitHub repository created and version 0.1.2 instal
 
 - [x] Verify the SDK setup correction on GitHub.
 - [x] Add successful-build APK artifacts and explain debug signing in the README.
-- [ ] Verify the final hosted workflow and publish the tested 0.1.2 APK with checksum.
-- [ ] Add the website project story and readable contribution dates together; test locally, push, and verify the rebuild.
+- [x] Verify the final hosted workflow and publish the tested 0.1.2 APK with checksum.
+- [x] Add the website project story and readable contribution dates together; test locally, push, and verify the rebuild.
