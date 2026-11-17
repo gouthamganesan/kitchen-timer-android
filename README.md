@@ -19,6 +19,14 @@ This repository includes the native app, the working HTML studies and the decisi
   <img src="docs/images/focus-dark.png" width="23%" alt="Minimal focus view with an amber disc on charcoal">
 </p>
 
+## Download for Android
+
+[**Download Kitchen Timer 0.1.2 APK**](https://github.com/gouthamganesan/kitchen-timer-android/releases/download/v0.1.2/Kitchen-Timer-0.1.2-debug.apk) · [Release notes and checksum](https://github.com/gouthamganesan/kitchen-timer-android/releases/tag/v0.1.2)
+
+Android 8.0 or later. This is a development preview, signed with a debug key, and installed directly from the APK. Android may ask you to allow installation from your browser. It is the same build tested locally and installed on the author's phone.
+
+Successful [Actions runs](https://github.com/gouthamganesan/kitchen-timer-android/actions/workflows/android.yml) also retain their debug APK for 30 days. Those runner-generated APKs use temporary debug keys and may require uninstalling a differently signed copy, which removes its saved settings. Use the release download above for this preview.
+
 ## The process: finding the taste
 
 The starting brief was specific: make an Android timer feel like an actual kitchen timer, with visual appeal at the centre. Taste became a sequence of decisions about material, hierarchy and behavior. Each revision had to make the object more convincing or make it easier to use.

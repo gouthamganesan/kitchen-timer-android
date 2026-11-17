@@ -11,3 +11,10 @@
 Acceptance: no device identifiers, credentials, local build paths, APKs or raw diagnostic output in the publication candidate; honest design narrative and test claims; reproducible app build.
 
 Publication completed: public GitHub repository created and version 0.1.2 installed on the phone. Build infrastructure explicitly installs Android SDK tools; hosted check history is available through the publication handoff.
+
+## Download and website follow-up
+
+- [x] Verify the SDK setup correction on GitHub.
+- [x] Add successful-build APK artifacts and explain debug signing in the README.
+- [ ] Verify the final hosted workflow and publish the tested 0.1.2 APK with checksum.
+- [ ] Add the website project story and readable contribution dates together; test locally, push, and verify the rebuild.
